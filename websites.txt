@@ -1,0 +1,53 @@
+HOTEL das-stein.at
+ - Logo prominent
+ - Navigation "sticky"
+ - Leistung kommunizieren
+ - Benefits
+ - CTA (Call to Action)
+ - Text-Hervorhebungen
+ - Chat
+ - Social Media
+ - Newsletter
+ - Sprachen
+ - Scroll to top
+ - Symbole
+
+HOTEL rulantica (europapark.de)
+ - Farbenfroh / Freundlich / Ansprechend für die Zielgruppe
+ - Einfache Navigation (mit Tooltips)
+
+SPORT woom.com
+ - Headline (h1): Zielgruppenansprache
+ - Typische Problemlösungen (Wo ist meine Bestellung... geblieben)
+ - CTA (Länderwahl, Sprache)
+ - Einfache Führung / ohne Ablenkung zur Bestellung / -Abschluss
+ - Vertrauen erwecken (Trusted shops)
+
+
+SPORT insolaxy.app (DESKTOP)
+ - Fullscreen Video (Hero Video)
+ - Simpler Aufbau
+ - Einfache Navigation (Benutzerführung)
+ - Logo links oben
+ - Navigation "sticky"
+ - ScrolL to top
+ - Benefits
+ - Symbole
+ - klasischer Footer
+
+
+NEWS CNN International
+  - wenig anspruchsvolles Layout
+  - Logo links oben
+  - ASIDE Elemente (Abseits)
+  - Keine Werbung?
+
+
+
+NEWS kleinezeitung.at
+ - Alle Rubriken klar sichtbar
+ - Farbwelten für Unterseiten
+ - [Mobile] Schriftgröße sehr klein
+ - Suchfunktion bei Mobile Version weg
+ - Werbung
+
