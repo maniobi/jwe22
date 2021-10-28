@@ -21,16 +21,19 @@
     <main>
 
         <details>
+            <!-- Aufklappbarer Abschnitt -->
             <summary>Textformatierungen</summary>
-
+            <!-- Label neben dem Pfeil -->
+            
             <h2>Meine erste Headline</h2>
             <p>
                 Hier zeige ich mit <i>verschiedenen Formatierungen</i> was ich alles 
-
                 <i><strong>im Text fett</strong></i>
-                
                 bereits mit <abbr title="Hyper Text Markup Language">HTML</abbr> darstellen kann.
             </p>
+            <h3>Besondere Zeichen und Formatierungen</h3>
+            <p>Reden wir einmal über den Klimawandel. Die CO<sub>2</sub> Belastung<sup>2</sup> durch Kühe ist sehr groß.</p>
+            
 
         </details>
 
@@ -55,7 +58,8 @@
 
         <hr>
 
-        <details open>
+        <!-- Bilder -->
+        <details>
             <summary>Bilder</summary>
 
             <h2>Statisches Bild</h2>
@@ -72,9 +76,138 @@
 
         </details>
 
+        <hr>
+    
+
+        <details>
+            <summary>Tabelle</summary>
+
+            <h2>Tabelle</h2>
+
+
+
+            <table border="1" cellpadding="5" cellspacing="2">
+                <thead>
+                    <tr>
+                        <th colspan="4">
+                            Das ist der Tabellen Header
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th rowspan="2">Preis</th>
+                        <td>€&nbsp;90,50</td>
+                        <td>&euro;&nbsp;110,05</td>
+                        <td>&euro; € &copy;</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe XD&reg;</td>
+                        <td>Coca Cola&trade;</td>
+                        <td>
+                            <video width="100%" src="media/mp4/Big_Buck_Bunny_360_10s_1MB.mp4" autoplay muted loop></video>
+                        </td>
+                    </tr>
+                </tbody>
+                
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            Das ist der Tabellen-Fuß / Fußzeile
+                        </td>
+                    </tr>
+                
+                </tfoot>
+
+                <caption>Dies könnte die Legende beinhalten um die Tabelle näher zu beschreiben</caption>
+
+            </table>
+            <p><small>Alle Preise inkl. 20% Mwst. Alle Rechte vorbehalten.</small></p>
+
+
+        </details>
+
+
+        <hr>
+
+
+        <details>
+            <summary>Video</summary>
+            
+            <h2>Video</h2>
+            <video width="100%" muted loop controls poster="img/medium.jpg" >
+                <source src="media/webm/Big_Buck_Bunny_720_10s_1MB.webm" type="video/webm">
+                <source src="media/mp4/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4">
+            </video>
+
+        </details>
+
+        <hr>
+
+        <details>
+            <summary>Audio</summary>
+            <h2>Audiodateien</h2>
+
+            <h3>Ludwig seine Musik</h3>
+            <audio src="media/mp3/Symphony No.6 (1st movement).mp3" controls></audio>
+
+            <br>
+            <br>
+
+
+            <h3>OE3 Stream</h3>
+            <audio src="https://orf-live.ors-shoutcast.at/oe3-q2a?player=radiothek_v1&referer=oe3.orf.at&userid=7acf2217-5de3-4f7c-9859-a1258c4d5edd" controls></audio>
+
+        </details>
+
+        <hr>
+
+        <details open>
+            <summary>Listen</summary>
+            <h2>Listen</h2>
+
+            <h3>Unsortierte Liste</h3>
+            <ul>
+                <li>
+                    Obst:
+                    <ul>
+                        <li>Apfel</li>
+                        <li>Birne</li>
+                        <li>Melone</li>
+                    </ul>
+                </li>
+                <li>Gemüse:
+                    <ul>
+                        <li>Karotte</li>
+                        <li>Tomate</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ol>
+                <li>Kapitel
+                    <ol type="I">
+                        <li>Abschnitt</li>
+                        <li>Abschnitt</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#produkte">Produkte</a></li>
+                    <li><a href="#ueber_uns">Über uns</a></li>
+                </ul>
+            </nav>
+
+        </details>
 
     </main>
 
+    <hr>
     <h3 id="bestimmterPunkt">Bestimmter Punkt dieser Seite</h3>
 
 
