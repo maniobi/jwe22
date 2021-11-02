@@ -1,0 +1,43 @@
+
+html * {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: purple;
+    font-size: 50px;
+}
+
+article {
+    width: 100%;
+    background-color: #ba2c2c;
+    color: #fff;
+    padding: 40px; 
+    margin-bottom: 20px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Hier kann man die Spezifität eines Selektors feststellen */
+article#teaser1 {
+    background-color: #ff0000;
+}
+/* Normalerweise wird das vorherige vom nachfolgenden überschrieben */
+
+
+#teaser1 {
+    color: silver;
+    background-color: green;
+}
+
+.rounded-borders {
+    border-radius: 10px;
+}
+
+.shade {
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.5);
+}
