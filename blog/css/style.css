@@ -1,0 +1,95 @@
+/* reset.css / normalize.css */
+html * {
+    box-sizing: border-box;
+}
+
+/* lokales Einbinden von Schriften */
+@font-face {
+    font-family: hey;
+    font-weight: normal;
+    src: url(../fonts/segoeui.ttf);
+}
+
+@font-face {
+    font-family: hey;
+    font-weight: bold;
+    src: url(../fonts/segoeuib.ttf);
+}
+
+@font-face {
+    font-family: hey;
+    font-weight: 600;
+    src: url(../fonts/seguisb.ttf);
+}
+
+:root {
+    --rot: #E74149;
+}
+
+body {
+    font-family: hey;
+}
+
+#logo_link {
+    text-decoration: none;
+}
+
+#logo {
+    max-width: 100%;
+    padding-right: 10px;
+}
+
+
+#menu {
+    text-decoration: none;
+}
+
+#menu img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.top {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main_header {
+    background-image: url(../img/content/blog-banner.png);
+    background-size: cover;
+    background-position: 55%;
+    height: 75vh;
+}
+
+
+h1 {
+    font-size: 36px;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.button {
+    background-color: var(--rot);
+    color: white;
+    text-decoration: none;
+    padding: 20px 35px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.h-spacing {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    #main_header {
+        background-image: url(../img/content/blog-banner@2x.png);
+    }
+
+}
