@@ -28,6 +28,7 @@ html * {
 
 body {
     font-family: hey;
+    margin: 0;
 }
 
 #logo_link {
@@ -59,8 +60,11 @@ body {
 #main_header {
     background-image: url(../img/content/blog-banner.png);
     background-size: cover;
-    background-position: 55%;
+    background-position: 55% 0;
+    background-repeat: no-repeat;
     height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
 }
 
 
@@ -69,6 +73,12 @@ h1 {
     color: white;
     margin-top: 100px;
     margin-bottom: 80px;
+    text-shadow: 0 0.1em 5px rgba(0,0,0,0.5);
+}
+
+h3 {
+    margin-bottom: 11px;
+    color: var(--rot);
 }
 
 .button {
@@ -79,6 +89,8 @@ h1 {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 600;
+    display: inline-block;
+    text-align: center;
 }
 
 .h-spacing {
@@ -86,10 +98,105 @@ h1 {
     padding-right: 30px;
 }
 
+.inner-wrapper {
+    max-width: 1200px;
+
+    /* relativer Abstand rechts und links (je nach Viewport-Breite) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teaser p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.teaser a {
+    color: var(--rot);
+    text-decoration: underline;
+}
+
+.teaser a::after {
+    content: '▶';
+    /* Alternative wäre: */
+    /* content: ' \25B6'; */
+
+    display: inline-block;
+    color: var(--rot);
+    padding-left: 10px;
+    font-size: 0.5em;
+    vertical-align: middle;
+}
+
+.teaser {
+    margin-bottom: 30px;
+}
+
+.teaser img {
+    max-width: 100%;
+    height: auto;
+}
+
+.teaser-element .abstract {
+    margin-top: 75px;
+    margin-bottom: 50px;
+    max-width: 650px;
+}
+
+/* Tablet (hochformat) */
 @media screen and (min-width: 768px) {
     
     #main_header {
         background-image: url(../img/content/blog-banner@2x.png);
+    }
+
+    #main_header .side-space {
+        margin-left: 8%;
+    }
+
+
+    .flex-container {
+        display: flex;
+        gap: 10px;
+    }
+
+}
+
+/* Small Desktop */
+@media screen and (min-width: 1200px) {
+
+    #main_header {
+        background-position: 55% 110px;
+        position: relative;
+    }
+
+    #main_header .inner-wrapper {
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Pseudoelemente als Abdunkelung */
+    #main_header::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: calc(100% - 110px);
+        background-color: rgba(0, 0, 0, 0.54);
+        position: absolute;
+        top: 110px;
+        left: 0;
+        z-index: 0;
+    }
+
+    /* Pseudoelemente für Linie danach */
+    #main_header::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
     }
 
 }
