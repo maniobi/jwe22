@@ -1,0 +1,128 @@
+/* reset.css / normalize.css */
+html * {
+    box-sizing: border-box;
+}
+
+/* lokales Einbinden von Schriften */
+@font-face {
+    font-family: standard;
+    font-weight: normal;
+    src: url(../fonts/segoeui.ttf);
+}
+
+@font-face {
+    font-family: standard;
+    font-weight: bold;
+    src: url(../fonts/segoeuib.ttf);
+}
+
+@font-face {
+    font-family: standard;
+    font-weight: 600;
+    src: url(../fonts/seguisb.ttf);
+}
+
+@font-face {
+    font-family: standard;
+    font-weight: 100;
+    src: url(../fonts/segoeuil.ttf);
+}
+
+:root {
+    --rosa: #F49C9C;
+    --silber: #888;
+    --gruen: #89D46F;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    font-family: standard;
+    margin-top: 36px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.top-line {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center;
+    color: var(--silber);
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 98px;
+    font-weight: 100;
+    line-height: 1.1em;
+    margin: 0; 
+    color: var(--rosa)
+}
+
+.subheader {
+    color: var(--rosa);
+    font-size: 19px;
+}
+
+.ribbon {
+    background-color: var(--silber);
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.35em;
+    padding-left: calc(30px + 0.35em);
+    font-size: 0.8rem;
+    position: relative;
+    left: -30px;
+    opacity: 0.54;
+}
+
+#horizon {
+    position: relative;
+    top: 0;
+    left: -30px;
+    margin-top: 22vh;
+    width: 100vw;
+    height: 10vh;
+    background: var(--rosa);
+}
+
+#model {
+    position: absolute;
+    bottom: 0;
+    right: -70px;
+}
+
+#bubble {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 166px;
+    height: 166px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 37px;
+    font-weight: 800;
+}
+
+.order-now {
+    display: block;
+    background-color: var(--gruen);
+    border-radius: 30px;
+    padding: 1em;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 100%;
+}
