@@ -1,0 +1,171 @@
+/* josefin-sans-300 - latin */
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/josefin-sans-v20-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/josefin-sans-v20-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-regular - latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+        url('../fonts/josefin-sans-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/josefin-sans-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-700 - latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+        url('../fonts/josefin-sans-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/josefin-sans-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --silver: #666;
+    --gold: #c39065;
+    --grey: #707070;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    max-width: 150px;
+}
+
+#burger_menu {
+    width: 35px;
+    height: auto;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+#burger_menu span {
+    width: 100%;
+    height: 3px;
+    background: var(--silver);
+    display: block;
+    margin-bottom: 7px;
+}
+#burger_menu span:last-child {
+    margin-bottom: 0;
+}
+
+/* #burger_menu span:nth-child(3) {
+    margin-bottom: 0;
+} */
+
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inner-wrapper {
+    margin: 0 auto;
+    padding: 0 30px 0;
+    max-width: 1200px;
+    position: relative;
+}
+
+#header_image img {
+    width: 100%;
+    max-width: 100%;
+    height: 45vw;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+#siegel {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(0) translateY(-50%);
+}
+
+main {
+    margin-top: 65px;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+#home_content {
+    color: var(--silver);
+    text-align: center;
+}
+
+a.button {
+    /* nimm die Farbe von der Schrift die mein benachbartes Element hat */
+    color: inherit;
+    padding: 0.5em 1em;
+    border: 2px solid var(--silver);
+    display: inline-block;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+#main_footer {
+    background: var(--gold);
+    padding-top: 50px;
+}
+
+#main_footer nav ul {
+    margin: 0 0 50px 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#main_footer nav ul li {
+    margin-bottom: 1em;
+}
+
+#main_footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#end {
+    padding: 30px;
+    background: var(--grey);
+    font-size: 0.8em;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    line-height: 1.5em;
+}
+
