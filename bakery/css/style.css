@@ -81,6 +81,10 @@ body {
     margin-bottom: 20px;
 }
 
+#main_menu {
+    display: none;
+}
+
 .inner-wrapper {
     margin: 0 auto;
     padding: 0 30px 0;
@@ -114,6 +118,7 @@ main {
 }
 
 h1 {
+    font-size: 2em;
     font-weight: 300;
     text-align: center;
 }
@@ -143,6 +148,19 @@ main img {
     padding-top: 50px;
 }
 
+#main_footer address {
+    color: white;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 5em;
+    line-height: 2em;
+}
+
+#main_footer address a {
+    color: inherit;
+    text-decoration: none;
+}
+
 #main_footer nav ul {
     margin: 0 0 50px 0;
     padding: 0;
@@ -169,3 +187,84 @@ main img {
     line-height: 1.5em;
 }
 
+
+.active {
+    color: var(--gold) !important;
+}
+
+
+
+/* Formulare */
+
+form .row {
+    margin-bottom: 1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    padding: 0.5em 0.8em;
+    font-family: "Josefin Sans";
+    border: 1px solid var(--gold);
+    width: 25em;
+    max-width: 100%;
+    min-height: 2.75em;
+    border-radius: 0.5em;
+    resize: none;
+}
+
+form input[type="submit"] {
+    background-color: var(--gold);
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 1em 3em;
+    border: none;
+    font-family: "Josefin Sans";
+    width: 25em;
+    max-width: 100%;
+    border-radius: 0.5em;
+}
+
+
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+    #main_menu {
+        display: block;
+    }
+
+    #burger_menu {
+        display: none;
+    }
+
+    #main_menu ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    #main_menu ul li a {
+        text-decoration: none;
+        color: var(--silver);
+    }
+
+    #main_footer > .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #main_footer address {
+        text-align: left;
+    }
+
+    #main_footer nav ul {
+        text-align: right;
+    }
+}
