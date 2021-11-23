@@ -65,108 +65,137 @@
         <section id="kontakt_content" class="inner-wrapper">
             <h1>Bestellen Sie bei uns</h1>
 
-           
-            <form action="kontakt.html" method="get" autocomplete="off">
+
+            <div class="container">
+
+                <div id="contact_data">
+                    <address>
+                        Konditorei Bakery<br>
+                        Musterstraße 123<br>
+                        1234 Somewhere City
+                    </address>
+        
+                    <p>
+                        Tel. +43 1234 56 789<br>
+                        Email. example@example.com
+                    </p>
+                </div>
                 
-                <div class="row">
-                    <label for="salutation_frau">
-                        <input type="radio" name="salutation" id="salutation_frau" value="Frau">
-                        Frau
-                    </label>
+               
+                <form action="kontakt.html" method="get" autocomplete="off">
                     
-                    <label for="salutation_herr">
-                        <input type="radio" name="salutation" id="salutation_herr" value="Herr">
-                        Herr
-                    </label>
-                    
-                    <label for="salutation_firma">
-                        <input type="radio" name="salutation" id="salutation_firma" value="Firma">
-                        Firma
-                    </label>
-                </div>
+                    <div class="row">
+                        <label for="salutation_frau">
+                            <input type="radio" name="salutation" id="salutation_frau" value="Frau">
+                            Frau
+                        </label>
+                        
+                        <label for="salutation_herr">
+                            <input type="radio" name="salutation" id="salutation_herr" value="Herr">
+                            Herr
+                        </label>
+                        
+                        <label for="salutation_firma">
+                            <input type="radio" name="salutation" id="salutation_firma" value="Firma">
+                            Firma
+                        </label>
+                    </div>
+    
+                    <div class="row">
+                        <label for="firstname">
+                            <div class="label">Vorname</div>
+                            <input type="text" name="firstname" id="firstname" minlength="3" maxlength="20" placeholder="Geben Sie hier Ihren Vornamen ein..." required>
+                        </label>
+                    </div>
+    
+                    <!-- Textfeld -->
+                    <div class="row">
+                        <label for="lastname">
+                            <div class="label">Nachname</div>
+                            <input type="text" name="lastname" id="lastname" minlength="3" maxlength="20" required>
+                        </label>
+                    </div>
+    
+                    <!-- E-Mail-Feld -->
+                    <div class="row">
+                        <div class="label">E-Mail</div>
+                        <label for="email">
+                            <input type="email" name="email" id="email">
+                        </label>
+                    </div>
+    
+                    <!-- Textfeld -->
+                    <div class="row">
+                        <div class="label">Betreff</div>
+                        <label for="subject">
+                            <input type="text" name="subject" id="subject">
+                        </label>
+                    </div>
+    
+                    <!-- Datumsfeld -->
+                    <div class="row">
+                        <div class="label">Wunsch-Liefertermin</div>
+                        <label for="delivery">
+                            <input type="date" name="delivery" id="delivery">
+                        </label>
+                    </div>
+    
+                    <div class="row">
+                        <div class="label">Woher kennen Sie uns?</div>
+                        <select name="referrer" id="referrer" required>
+                            <!-- Vorausgewähltes Element 'selected' deaktiviert für die Auswahl -->
+                            <option disabled selected>Bitte wählen Sie eine option...</option>
+                            <option value="Freunde">Freunde</option>
+                            <option value="Schwiegermutter">Schwiegermutter</option>
+                            <option value="Google">Google</option>
+                            <option value="Weiß nicht mehr...">Weiß nicht mehr...</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="row">
+                        <label for="message">
+                            <div class="label">Nachricht</div>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Tippen Sie hier ihre Nachricht ein..."></textarea>
+                        </label>
+                    </div>
+    
+    
+                    <div class="row">
+                        <label for="gdpr">
+                            <input type="checkbox" name="gdpr" id="gdpr" required>
+                            <span class="label">Ja ich bin mir bewusst, dass meine Daten übertragen werden.</span>
+                        </label>
+                    </div>
+    
+                    <input type="file" name="upload" id="upload" multiple accept=".doc,.docx,.jpg">
+    
+                    <div class="row">
+                        <input type="submit" value="Formular abschicken">
+                    </div>
+                </form>
 
-                <div class="row">
-                    <label for="firstname">
-                        <div class="label">Vorname</div>
-                        <input type="text" name="firstname" id="firstname" minlength="3" maxlength="20" required>
-                    </label>
-                </div>
+            </div>
 
-                <!-- Textfeld -->
-                <div class="row">
-                    <label for="lastname">
-                        <div class="label">Nachname</div>
-                        <input type="text" name="firstname" id="lastname" minlength="3" maxlength="20" required>
-                    </label>
-                </div>
-
-                <!-- E-Mail-Feld -->
-                <div class="row">
-                    <div class="label">E-Mail</div>
-                    <label for="email">
-                        <input type="email" name="email" id="email">
-                    </label>
-                </div>
-
-                <!-- Textfeld -->
-                <div class="row">
-                    <div class="label">Betreff</div>
-                    <label for="subject">
-                        <input type="text" name="subject" id="subject">
-                    </label>
-                </div>
-
-                <!-- Datumsfeld -->
-                <div class="row">
-                    <div class="label">Wunsch-Liefertermin</div>
-                    <label for="delivery">
-                        <input type="date" name="delivery" id="delivery">
-                    </label>
-                </div>
-
-                <div class="row">
-                    <div class="label">Woher kennen Sie uns?</div>
-                    <select name="referrer" id="referrer" required>
-                        <!-- Vorausgewähltes Element 'selected' deaktiviert für die Auswahl -->
-                        <option disabled selected>Bitte wählen Sie eine option...</option>
-                        <option value="Freunde">Freunde</option>
-                        <option value="Schwiegermutter">Schwiegermutter</option>
-                        <option value="Google">Google</option>
-                        <option value="Weiß nicht mehr...">Weiß nicht mehr...</option>
-                    </select>
-                </div>
-
-
-                <div class="row">
-                    <label for="message">
-                        <div class="label">Nachricht</div>
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                    </label>
-                </div>
-
-
-                <div class="row">
-                    <label for="gdpr">
-                        <input type="checkbox" name="gdpr" id="gdpr" required>
-                        <span class="label">Ja ich bin mir bewusst, dass meine Daten übertragen werden.</span>
-                    </label>
-                </div>
-
-                <input type="file" name="upload" id="upload" multiple>
-
-                <div class="row">
-                    <input type="submit" value="Formular abschicken">
-                </div>
-
-
-
-
-            </form>
+            
 
 
         </section>
 
      
+        <section id="maps_element">
+
+            <div class="inner-wrapper">
+
+                <h2>Anfahrtsplan</h2>
+                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.475621133651!2d13.034907716237726!3d47.81099988182781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769076da8b2391%3A0x696b6e0016c1a073!2sLehener%20Br%C3%BCcke%2C%205020%20Salzburg!5e0!3m2!1sde!2sat!4v1637689884977!5m2!1sde!2sat" target="mapsFrame">Lehnerbrücke anzeigen</a>
+
+                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373.0050819945285!2d16.395506863156438!3d48.216670459313995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d070f8c8d8525%3A0xacd6a16779e55706!2sWiener%20Riesenrad!5e0!3m2!1sde!2sat!4v1637690008210!5m2!1sde!2sat" target="mapsFrame">Riesenrad Wien</a>
+
+                <iframe name="mapsFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169.0151251477252!2d13.152878667981454!3d47.32914489395269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776d87c523139ed%3A0xb57c75bb13b0e75c!2sB%C3%A4ckerei%20Walkner%20KEG!5e0!3m2!1sde!2sat!4v1637687726883!5m2!1sde!2sat" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+        </section>
 
 
     </main>
