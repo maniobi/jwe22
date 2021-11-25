@@ -1,0 +1,136 @@
+html * {
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+}
+
+:root {
+    --blue: #47afd4;
+    --lblue: #86c8e0;
+    --grey: #444444;
+    --lgrey: #969696;
+
+    --space: 30px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+#main_header {
+    background: white;
+}
+
+#main_header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: var(--space);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#header_image {
+    border-bottom: 5px solid var(--blue);
+    position: relative;
+}
+
+#header_image img {
+    display: block;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: right top;
+}
+
+#header_image .text {
+    position: absolute;
+    top: var(--space);
+    right: var(--space);
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    color: white;
+    text-transform: uppercase;
+}
+
+#header_image .text .subheader {
+    color: var(--blue);
+    max-width: 50%;
+    margin-left: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--blue);
+    border: 2px solid var(--lblue);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em
+}
+
+.inner-wrapper {
+    padding-left: var(--space);
+    padding-right: var(--space);
+}
+
+h2 {
+    color: var(--blue);
+    font-family: 'Montserrat';
+    font-size: 1.1em;
+}
+
+.teaser-text {
+    font-size: 0.8em;
+    color: var(--lgrey);
+    line-height: 1.5em;
+}
+
+.teaser-text a {
+    margin-top: 1em;
+    display: inline-block;
+    color: var(--blue);
+}
+
+
+#grid_gallery_element {
+    padding-top: var(--space);
+    padding-bottom: var(--space);
+    background-color: var(--grey);
+}
+
+.gallery-text {
+    color: white;
+    font-size: 0.8em;
+}
