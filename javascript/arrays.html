@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays &amp; Funktionen</title>
+</head>
+<body>
+
+    <input id="product" type="text" value="" placeholder="z.B. Brot">
+    <button id="add" onclick="addNewProduct()">hinzufügen</button>
+
+    <script>
+
+        // leeres Array deklarieren / definieren
+        let shoppingList = []
+
+        function addNewProduct() {
+
+            // information aus dem Formularfeld lesen
+            let product = document.getElementById('product').value;
+
+            // produkt hinzufügen
+            shoppingList.push(product);
+
+            // erzeuge ein neues HTML-Element
+            let listElement = document.createElement('li');
+
+            // Gib dem neuen (leeren) Element einen Content (innerText)
+            listElement.innerText = product; 
+
+            // füge am Anfang des <body> hier ..... das neue Element hinzu
+            document.body.prepend(listElement);
+
+        }
+    
+    </script>
+    
+</body>
+</html>

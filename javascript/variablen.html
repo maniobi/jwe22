@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variablen in JavaScript</title>
+</head>
+<body>
+
+    <!-- Jetzt beginnen wir mit JavaScript -->
+
+    <script>
+
+        var meinAuto = "Ferrari";           // String
+        let meinZweitesAuto = "Jaguar";     // String
+
+
+        //console.log( "Mein erstes Auto war ein " + meinAuto + " und mein zweites Auto ist aktuell ein " + meinZweitesAuto );
+
+        let meinAlter = 17;                 // Integer
+        let alterDerSchwester = 28;         // Integer
+        let alterDerMutter = 57;            // Integer
+
+        let koeperGroesse = 1.80            // Float (Angabe in Meter)
+
+        // console.log( meinAlter + alterDerMutter + alterDerSchwester );
+
+        //console.log( "Ich bin " + meinAlter + " alt" );
+
+        //console.log( `Ich bin ${meinAlter} alt` );
+
+
+        //console.log(`Meine Körpergröße ist ${koeperGroesse} Meter`);
+
+        // console.log(koeperGroesse);
+
+        
+        // Side Effects Example
+        let numberAsAString = " 10 ";
+        //console.log(numberAsAString * 2); // String wird zu Zahl wenn man diesen multipliziert
+
+
+
+        // Mindestalter?
+
+        //console.log( meinAlter >= 18 );
+
+        //console.log( 3 * 3 == 8 );
+
+
+        //let alter = prompt("Wie alt sind Sie?", "");
+
+        let alter;
+
+        console.log(alter);
+
+        if( alter >= 18 ) {
+            console.log('Du bist alt genug');
+        } else {
+            console.log('Du bist zu jung');
+        }
+
+
+        const user = "christoph";
+
+
+        // Rechnen mit Zahlen
+
+        let zahl1 = 15;
+
+        //zahl1 = zahl1 + 1;
+
+        // Zahl um 1 erhöhen
+        zahl1++;
+        zahl1++;
+
+        // um 1 verringern
+        zahl1--;
+
+        // Zahl um 6 erhöhen
+        zahl1+=6;
+
+        // Zahl um 5 reduzieren
+        zahl1-=5;
+    
+        //console.log(zahl1);
+
+
+        let zahlAlsString = "18 bin ich";
+        let zahlAlsStingVariante2 = "ich bin 18";
+
+        let zahlAusDemString = parseInt(zahlAlsString);
+        let zahlAusDemStringVar2 = parseInt(zahlAlsStingVariante2)
+
+        console.log(zahlAusDemString);
+        console.log(zahlAusDemStringVar2);
+
+
+        
+        
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
