@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial / Selbsttest</title>
+
+    <style>
+    
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 3rem;
+        }
+
+        .list-item > * {
+            padding: 0.5rem;
+            display: inline-block;
+            user-select: none;
+            cursor: pointer;
+            transition: background .5s ease;
+        }
+        .list-item > *:hover,
+        .list-item >*:checked+* {
+            background-color: rgb(110, 206, 110);
+            color:rgb(41, 110, 41);
+        }
+        .list-item {
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+
+        .list-item input {
+            margin-top: calc(.5rem * 1.5);
+            margin-left: .8rem;
+            margin-right: .8rem;
+        }
+
+        .list-item label {
+            border-radius: .2rem;
+        }
+
+        pre {
+            background: #333;
+            color: white; 
+            border-radius: .2rem;
+            line-height: inherit;
+            margin: -.2rem .2rem 0 .2rem;
+            display: inline-block;
+            padding: 0.4em 0.5em;
+            vertical-align: middle;
+        }
+
+        #success {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255,255,255,0.95);
+            color:rgb(67, 182, 67);
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 1.5rem;
+
+        }
+
+
+        /**
+        * SweetAlert
+        */
+        .success-checkmark {
+            width: 80px;
+            height: 115px;
+            margin: 0 auto;
+        }
+        .success-checkmark .check-icon {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            border-radius: 50%;
+            box-sizing: content-box;
+            border: 4px solid #4CAF50;
+        }
+        .success-checkmark .check-icon::before {
+            top: 3px;
+            left: -2px;
+            width: 30px;
+            transform-origin: 100% 50%;
+            border-radius: 100px 0 0 100px;
+        }
+        .success-checkmark .check-icon::after {
+            top: 0;
+            left: 30px;
+            width: 60px;
+            transform-origin: 0 50%;
+            border-radius: 0 100px 100px 0;
+            animation: rotate-circle 4.25s ease-in;
+        }
+        .success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+            content: "";
+            height: 100px;
+            position: absolute;
+            background: #FFFFFF;
+            transform: rotate(-45deg);
+        }
+        .success-checkmark .check-icon .icon-line {
+            height: 5px;
+            background-color: #4CAF50;
+            display: block;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 10;
+        }
+        .success-checkmark .check-icon .icon-line.line-tip {
+            top: 46px;
+            left: 14px;
+            width: 25px;
+            transform: rotate(45deg);
+            animation: icon-line-tip 0.75s;
+        }
+        .success-checkmark .check-icon .icon-line.line-long {
+            top: 38px;
+            right: 8px;
+            width: 47px;
+            transform: rotate(-45deg);
+            animation: icon-line-long 0.75s;
+        }
+        .success-checkmark .check-icon .icon-circle {
+            top: -4px;
+            left: -4px;
+            z-index: 10;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            box-sizing: content-box;
+            border: 4px solid rgba(76, 175, 80, 0.5);
+        }
+        .success-checkmark .check-icon .icon-fix {
+            top: 8px;
+            width: 5px;
+            left: 26px;
+            z-index: 1;
+            height: 85px;
+            position: absolute;
+            transform: rotate(-45deg);
+            background-color: #FFFFFF;
+        }
+
+        @keyframes rotate-circle {
+            0% {
+                transform: rotate(-45deg);
+            }
+            5% {
+                transform: rotate(-45deg);
+            }
+            12% {
+                transform: rotate(-405deg);
+            }
+            100% {
+                transform: rotate(-405deg);
+            }
+        }
+        @keyframes icon-line-tip {
+            0% {
+                width: 0;
+                left: 1px;
+                top: 19px;
+            }
+            54% {
+                width: 0;
+                left: 1px;
+                top: 19px;
+            }
+            70% {
+                width: 50px;
+                left: -8px;
+                top: 37px;
+            }
+            84% {
+                width: 17px;
+                left: 21px;
+                top: 48px;
+            }
+            100% {
+                width: 25px;
+                left: 14px;
+                top: 45px;
+            }
+        }
+        @keyframes icon-line-long {
+            0% {
+                width: 0;
+                right: 46px;
+                top: 54px;
+            }
+            65% {
+                width: 0;
+                right: 46px;
+                top: 54px;
+            }
+            84% {
+                width: 55px;
+                right: 0px;
+                top: 35px;
+            }
+            100% {
+                width: 47px;
+                right: 8px;
+                top: 38px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Selbsttest / Checklist für deine Skills in JavaScript</h1>
+    
+    
+    <p>Mit den unten stehenden Fragen kannst du dein Wissen prüfen und so deine bisherigen Skills testen. Versuche so viele Fragen wie möglich zu beantworten und erstelle zu jeder Frage ein Code-Beispiel.</p>
+
+    <form action="" id="listOfQuestions">
+        <!-- hier kommen die Fragen (via JavaScript) -->
+    </form>
+
+    
+    <hr style="margin: 3rem 0 0">
+    <small>JavaScript based SkillCheckList v1.0.1-hour-project | <span id="copyrightYear"></span> © by Manuel Obermoser</small>
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.js" crossorigin="anonymous"></script>
+
+    <script>
+        let fragen = [
+            'Wie wird JavaScript (lokal) im HTML Dokument angewendet?',
+            'Wie wird JavaScript in ein Dokument eingebunden?',
+            'Welche Besonderheit muss beachtet werden, wenn eine JavaScript Datei aus externer Quelle eingebunden wird? (Datenschutz)',
+            'Wie schreibt man einen <pre>Kommentar</pre> (einzeilig bzw. mehrzeilig) in JavaScript?',
+            'Wie wird eine Variable deklariert?',
+            'Wie wird eine Konstante deklariert?',
+            'Welchen wo liegt der Unterschied zwischen <pre>var</pre>, <pre>let</pre> und <pre>const</pre>?',
+            'Was ist ein <pre>type</pre> und welche gibt es?',
+            'Wie kann ein Datentyp geprüft werden?',
+            'Was ist der Unterschied zwischen <pre>undefined</pre> und  <pre>not defined</pre>',
+            'Wo kann ich meinen JavaScript Code "ausprobieren" und debuggen?',
+            'Wo im Browser können Werte ausgegeben werden?',
+            'Wie kann eine Zeichenkette mit einer weiteren verbunden werden?',
+            'Wie wird ein <pre>array</pre> in JavaScript deklariert?',
+            'Wie kann ein Element in einem <pre>array</pre> entfernt oder hinzugefügt werden?',
+            'Wie wird ein <pre>object</pre> deklariert?',
+            'Wie kann ich auf einzelne <pre>Properties</pre> eines Objects zugreifen?',
+            'Wie wird eine <pre>for</pre>-Schleife deklariert?',
+            'Wie wird ein <pre>if</pre>-Statement deklariert? (mehrere Ausprägungen)',
+            'Was ist ein Vergleichsoperator und welche gibt es?',
+            'Welche Logischen Operatoren gibt es und wie werden sie angewendet?',
+            'Wie kann jQuery eingebunden werden?',
+            'Welche Quelle kann ich nutzen um herauszufinden was jQuery drauf hat?',
+            'Wie kann ich mit jQuery "dynamisch" ein HTML-Element erzeugen?',
+            'Wie kann ich ein HTML-Element mit jQuery selektieren?',
+            'Was passiert, wenn ich einen jQuery-Selektor verwende, welcher mehrere Elemente anspricht?',
+            'Wie können Cookies gesetzt bzw. gelesen werden? (mit einer JavaScript Library)',
+            
+        ];
+
+        let output = '';
+
+        $(fragen).each((index) => {
+            output+= `
+                <div class="list-item">
+                    <input type="checkbox" name="q${index}" id="q${index}" data-index="${index}">
+                    <label for="q${index}">${fragen[index]}</label>
+                </div>
+            `;
+        });
+
+        $('#listOfQuestions').append(output);
+
+        let cookie = Cookies.get('checked_items');
+
+        if(cookie !== '') {
+
+            $(cookie.split(',')).each(function(index, value) {
+                $('.list-item input').eq(value).attr('checked', 'checked')
+            });
+
+        }
+
+        // set cookie with checked items
+        $('.list-item input').change(function() {
+            let input = $(this);
+            
+            let listOfChecked = [];
+
+            $('.list-item input:checked').each(function(){
+                listOfChecked.push($(this).data('index'));
+            });
+
+            Cookies.set('checked_items', listOfChecked.join(','))
+
+            if($('.list-item input').length === $('.list-item input:checked').length) {
+                
+                $('<div id="success"><div class="success-checkmark"><div class="check-icon"><span class="icon-line line-tip"></span><span class="icon-line line-long"></span><div class="icon-circle"></div><div class="icon-fix"></div></div></div><h1>Super!</h1> Du hast alle Fragen erfolgreich beantwortet.<br><br><small>Versuche neue Fragen zu finden um dein Wissen zu erweitern!</small></div>').appendTo('body');
+
+            }
+            
+
+        });
+
+        // get current year for copyright footer
+        const d = new Date();
+        $('#copyrightYear').text(d.getFullYear());
+    </script>
+
+    
+</body>
+</html>
