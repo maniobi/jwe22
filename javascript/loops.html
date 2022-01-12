@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen in JavaScript</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let star = "*";
+        let space = " ";
+        let rows = 25;
+
+        for(let i = 1; i <= rows; i++) {
+            
+
+            let newSpace = '';
+
+            for(let x = 1; x <= ((rows*2-1)-star.length)/2; x++) {
+                newSpace = newSpace + ' ';
+            }
+
+        
+            console.log(newSpace + star + newSpace);
+
+            star = '*' + star + '*';
+
+            /*
+
+                   *       
+                  ***      
+                 *****
+                *******
+               *********
+              ***********
+             *************
+            ***************
+
+
+            */
+
+        }
+
+
+    </script>
+
+</body>
+</html>

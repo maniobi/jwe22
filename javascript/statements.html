@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedingungen in JavaScript</title>
+</head>
+<body>
+    
+<script>
+
+    if(navigator.userAgentData.brands[2].brand == 'Google Chrome') {
+        console.log('You are using Googles Browser');
+    } 
+
+    if(navigator.userAgentData.brands[2].brand == 'Microsoft Edge') {
+        console.log('You know Bill Gates, hoo!?');
+    }
+
+    let alter = 55;
+
+    // Vergleichsoperatoren < > == <= >=
+    // Logische Operatoren && (und) bzw. || (oder)
+    if(5 <= alter && alter <= 18 || alter == 0) {
+        console.log('Tú eres un nino o una nina');
+    } else {
+        console.log('Tú eres un hombre o una mujer');
+    }
+
+
+    if(alter != 55) {
+        console.log('Youre not 55');
+    }
+
+
+    // Umkehren von Statement-Ergebnissen mit ! (Rufzeichen)
+    let sky = "yellow";
+
+    if( !(sky == "blue" && 1 != 1) ) {
+        console.log('Heute ist Gegenteiltag!');
+    }
+
+    if ( 1 != 1) {
+        // wenn dann             
+    } else if( 2 == 2 ) {
+        // wenn 1. Bedingung nicht zutrifft, dann (wenn die neue Bedingung zutrifft)...
+    } else {
+        // wenn nichts anderes zutrifft, dann...
+    }
+
+
+    function myFunction() {
+        if(1==2) {
+            // 1. Ebene, wenn
+        } else {
+            // 1. Ebene, andernfalls
+            if( 2 == 3) {
+                // 2. Ebene, wenn
+                console.log('komplexes If');
+            }
+        }
+    }
+
+
+
+    if( 1 == "1") {
+        console.log('unsensitive / no typecasting');
+    }
+
+    function zahl1() {
+        return 1;
+    }
+
+    let zahl2 = 1.0;
+
+    if( zahl1() === zahl2 ) {
+        console.log('beide Ergebnisse sind vom type eine "number" ');
+    }
+
+    if( 1 === "1" ) {
+        console.log('das eine ist ein "integer", das andere ein "string"');
+    }
+
+
+    let age = 55;
+
+    // Switch, Case
+
+    switch (age) {
+        case 55:
+            console.log('Half way done...');  
+
+            /*
+            
+                ## MEHRZEILIGER KOMMENTAR ###
+
+                ohne break; wird so lange 
+                weiter nach möglichen "case" gesucht, bis ein break kommt,
+                oder eben der "default" werde übrig bleibt.
+                
+            */
+
+        case 0:
+            console.log('your still a baby');
+            break;
+        default:
+            console.log('Just a boring age');
+    }
+
+
+    
+
+
+
+
+    
+
+
+</script>
+
+</body>
+</html>

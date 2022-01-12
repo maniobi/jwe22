@@ -32,6 +32,56 @@
         // dann aufrufen
         myFunction();
 
+
+        function sayMyName(name) {
+            console.log(`Your name is ${name}`);
+        }
+
+
+        function termostat(temp) {
+            if(temp >= 21){
+                console.log('die Temperatur ist angenehm (HEIZUNG AUS)');
+            } else {
+                console.log('die Temperatur ist zu niedrig (HEIZUNG AN)');
+            }
+        }
+
+        // Parameter
+        function addieren(zahl1, zahl2) {
+            return eval( (zahl1) + zahl2 );
+        }
+
+        let ergebnis = addieren(3,29);
+
+
+
+        let globaleVariable = 5;
+
+        function liesVariablen() {
+            globaleVariable = 7;
+            console.log(globaleVariable);
+        }
+
+        console.log(globaleVariable);
+
+
+
+        let alter = 21;
+
+        function alterAendern(neuesAlter) {
+           alter = neuesAlter; 
+        }
+
+        function alterAusgeben () {
+            console.log(alter);
+
+            
+
+        }
+
+
+
+
     </script>
 </body>
 </html>

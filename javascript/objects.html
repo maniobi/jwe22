@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte in JavaScript</title>
+</head>
+<body>
+    <script>
+
+        let user = {
+            name: 'Nik',
+            username: 'Yourmama',
+            password: 'asdf1234',
+            age: 34,
+            sayName: function() {
+                console.log('Hi, its me, '+ this.username + '!');
+            },
+            tellAge: function() {
+                console.log(`Hi, I'am ${this.age} years old.`);
+            }
+        };
+
+
+        let auto = {
+            model: 'tesla',
+            drive: function() {
+                console.log('DRIVIN......!');
+            },
+            autopilot: function() {
+                console.log('Autopilot activated!');
+            }
+        };
+
+
+        let haus = {
+            height: 30000,
+            floor1: {
+                persons: 'Ana, Peter, Nik'
+            },
+            floor2: {
+                persons: 'Maxim, Manuel, Christoph'
+            }
+        };
+
+
+
+        console.log(user.name);
+
+
+    </script>
+</body>
+</html>
