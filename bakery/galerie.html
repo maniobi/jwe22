@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie | Bakery </title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="css/style.css">
+
+    
 
 </head>
 <body>
@@ -62,72 +67,87 @@
             <h1>Galerie</h1>
             <p style="text-align: center; margin-bottom: 3rem;">Ein paar Eindrücke aus unserem Arbeitsalltag.</p>
 
-            <div class="container">
+            <div class="container" id="gallery">
 
                 <div class="grid-item hochformat-bild" 
                      style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 3;"
                 >
-                    <img src="/img/content/column-item-image1.jpg" alt="Bild1">
+                
+                    <!-- 
+
+                        von: 
+
+                        <img src="/img/content/column-item-image1.jpg" alt="Bild1">
+
+
+                        zu:
+
+                        <a href="/img/content/full/column-item-image1.jpg" data-fancybox="gallery">
+                            <img src="/img/content/thumbs/column-item-image1.jpg" alt="Bild1">
+                        </a>
+                     -->
+
+                    <img src="/img/content/thumbs/column-item-image1.jpg" alt="Bild1">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image2.jpg" alt="Bild2">
+                    <img src="/img/content/thumbs/column-item-image2.jpg" alt="Bild2">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild3">
+                    <img src="/img/content/thumbs/column-item-image3.jpg" alt="Bild3">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild4">
+                    <img src="/img/content/thumbs/column-item-image4.jpg" alt="Bild4">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/teaser1.jpg" alt="Bild5">
+                    <img src="/img/content/thumbs/teaser1.jpg" alt="Bild5">
                 </div>
 
                 <div class="grid-item hochformat-bild"
                      style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 4;"
                 >
-                    <img src="/img/content/column-item-image1.jpg" alt="Bild1">
+                    <img src="/img/content/thumbs/column-item-image1.jpg" alt="Bild1">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image2.jpg" alt="Bild2">
+                    <img src="/img/content/thumbs/column-item-image2.jpg" alt="Bild2">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild3">
+                    <img src="/img/content/thumbs/column-item-image3.jpg" alt="Bild3">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild4">
+                    <img src="/img/content/thumbs/column-item-image4.jpg" alt="Bild4">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/teaser1.jpg" alt="Bild5">
+                    <img src="/img/content/thumbs/teaser1.jpg" alt="Bild5">
                 </div>
 
                 <div class="grid-item hochformat-bild"
                      style="grid-column: 2 / 3; grid-row: 4 / 6;"
                 >
-                    <img src="/img/content/column-item-image1.jpg" alt="Bild1">
+                    <img src="/img/content/thumbs/column-item-image1.jpg" alt="Bild1">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image2.jpg" alt="Bild2">
+                    <img src="/img/content/thumbs/column-item-image2.jpg" alt="Bild2">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild3">
+                    <img src="/img/content/thumbs/column-item-image3.jpg" alt="Bild3">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild4">
+                    <img src="/img/content/thumbs/column-item-image4.jpg" alt="Bild4">
                 </div>
                 <div class="grid-item">
-                    <img src="/img/content/teaser1.jpg" alt="Bild5">
+                    <img src="/img/content/thumbs/teaser1.jpg" alt="Bild5">
                 </div>
 
                 <div class="grid-item hochformat-bild"
                      style="grid-column: 3 / 4; grid-row: 4 / 6;"
                 >
-                    <img src="/img/content/column-item-image1.jpg" alt="Bild1">
+                    <img src="/img/content/thumbs/column-item-image1.jpg" alt="Bild1">
                 </div>
                 <div class="grid-item" style="grid-row: 6 / 7; grid-column: 1 / 3;">
-                    <img src="/img/content/column-item-image2.jpg" alt="Bild2">
+                    <img src="/img/content/thumbs/column-item-image2.jpg" alt="Bild2">
                 </div>
                 <div class="grid-item" style="grid-row: 6 / 7; grid-column: 3 / 5;">
-                    <img src="/img/content/column-item-image3.jpg" alt="Bild3">
+                    <img src="/img/content/thumbs/column-item-image3.jpg" alt="Bild3">
                 </div>
                 
             </div>
@@ -173,5 +193,59 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript Libs (vor der Anwendung, vor dem Einsatz einfügen) -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+        
+        // erstellen ein neues HTML Element ( <a/> )
+        let linkPrototype = $('<a href="#" data-fancybox="gallery"></a>');
+        
+        // $('#gallery .grid-item img') => Ergebnis= Objekt mit allen Bildern in der Gallery
+
+        // JavaScript Standard Code
+        // elemente.forEach(function() {
+        //     // bild für askljaslkjsalkd
+        // });
+
+        // suchen nach Bilder in der Gallery ( #gallery .grid-item > img )
+        // alle Bilder aufsuchen die manipuliert werden sollen
+        let bilder = $('#gallery .grid-item img');
+        
+        // for Each Element in "bilder" (Schleife/Loop)
+        // jQuery Kurzschreibweise von "forEach"
+        bilder.each(function(){
+
+            // $(this) einer Variable zuweisen
+            let bild = $(this);
+
+            // src auslesen und in eine Variable speichern
+            // <img src="..." />
+            let bildPfad = bild.attr('src');
+            
+            // Pfadsegment 'thumbs' ersetzen durch 'full' (manipulieren)
+            bildPfad = bildPfad.replace('/thumbs/','/full/');
+
+            // Link-Prototypen bearbeiten und den aktuellen Pfad einfügen in das href-Attribut
+            linkPrototype.attr('href', bildPfad);
+
+            // Link-Prototypen um das Bild "wrappen"
+            bild.wrap(linkPrototype);
+
+        });
+
+
+        // lesen wir aus den Bilder die bereits in der Gallery vorhanden sind
+        // => src="..."
+        // den anchor link rund herum geben (wrap)
+
+
+
+
+    </script>
+
 </body>
 </html>
