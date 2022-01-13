@@ -197,6 +197,36 @@ main img {
 
 /* Formulare */
 
+#products {
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--gold);
+}
+
+#products .row:first-child > span {
+    font-weight: bold;
+}
+
+#products .row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#products .row > span:nth-child(1) {
+    width: 130px;
+}
+
+#products .row > span:nth-child(2) {
+    width: 60px;
+    text-align: center;
+}
+
+
+#products .row > span:nth-child(3) {
+    width: 100px;
+    text-align: center;
+}
+
+
 form .row {
     margin-bottom: 1em;
 }
