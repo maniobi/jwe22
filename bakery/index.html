@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willkommen bei der Bakery</title>
 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -35,10 +37,21 @@
 
         </div>
 
-        <picture id="header_image">
-            <source srcset="img/pexels-klaus-nielsen-6287298_large.jpg" media="(min-width: 768px)">
-            <img src="img/pexels-klaus-nielsen-6287298_small.jpg" alt="">
-        </picture>
+
+        <div class="slider" id="header_image">
+            <picture>
+                <source srcset="img/pexels-klaus-nielsen-6287298_large.jpg" media="(min-width: 768px)">
+                <img src="img/pexels-klaus-nielsen-6287298_small.jpg" alt="">
+            </picture>
+            <picture>
+                <img src="img/pexels-maria-orlova-4913487.jpg" alt="">
+            </picture>
+            <picture>
+                <img src="img/pexels-meruyert-gonullu-6152263.jpg" alt="">
+            </picture>
+        </div>
+
+        
 
 
         <div class="inner-wrapper">
@@ -110,5 +123,21 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
+    <script>
+        $('#header_image').slick(
+            {
+                prevArrow: false,
+                nextArrow: false,
+                autoplay: true,
+                fade: true,
+                speed: 3000,
+            }
+        );
+    </script>
+
 </body>
 </html>
