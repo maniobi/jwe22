@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillCheck 2022-01-18</title>
+
+    <script>
+        // JavaScript Code - Kommentar einzeilig
+
+        /*
+            Kommentar 
+            mehrzeilig
+
+        */           
+
+        
+        // Variable deklariert (bekanntgegeben)
+        // Keyword "let", Variablenname "xyz", Wert
+        /* Wert (Datentyp) kann sein: 
+            - Zahl (Ganze- und Dezimal-Zahlen, positiv/negativ) [integer, float]
+            - Funktion [functions]
+            - Zeichenkette [string]
+            - Array
+            - Object
+
+        */
+        let xyz = 5; // integer
+        let meinName = 'Ralf'; // string
+        let namen = ['Ana', 'Maxim', 'Nik']; // array
+
+        let sagHallo = function sagHallo () {
+            console.log('was auch immer du willst...');
+            //alert('was auch immer du willst...');
+        }
+
+        let auto = {
+            marke: 'Audi', // string
+            typ: '80', // string
+            ps: 150, // integer
+            hupe: function() { console.log('Huuuuupp! Huuuuuup!') }, // function
+            autoradio: ['fm4', 'oe3', 'Radiofabrik', 'Radio Salzburg'] // array
+        };
+
+
+
+        {
+            // Geschützte Bereiche
+            // Scope 1
+            let xyz = 10;
+            // console.log('Scope1 xyz', xyz);
+
+            let privateVariable = 'hey das is geheim';
+            // console.log(privateVariable);
+        }
+
+        {
+            // Scope 2
+            let xyz = 15;
+            // console.log('Scope2 xyz', xyz);
+            let sagHallo = 'hello!';
+        }
+        
+        // console.log(xyz);
+
+
+        // undefined: deklartiert, Datentyp ist nicht bekannt, noch nicht getauft
+        // not defined: nicht existent, noch nicht deklariert/bekanntgemacht
+        let deineUndefinierteVariable;
+        // console.log(deineUndefinierteVariable); // undefined
+        // console.log(meineNeueVariable); // not defined
+
+        //console.log(meinOutput);
+
+        
+
+
+    </script>
+
+    <script src="script.js"></script>
+
+    <!-- Beim einbinden von externen JavaScript Dateien, das Attribut crossorigin="anonymous" hinzufügen -->
+    <script src="https://www.fremderserver.com/jquery.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Hallo wie gehts?</h1>
+
+
+
+</body>
+</html>
