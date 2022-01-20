@@ -54,13 +54,32 @@
             
             let anzahl = $(this).val();
 
+            // Maximale Anzahl der Kinder
+            const maxAnzahl = 6;
+
+            /*  überschreitet anzahl die maxAnzahl, 
+                wird das Formularfeld auf die maxAnzahl gesetzt.
+            */
+            if(anzahl > maxAnzahl) {
+                $(this).val(maxAnzahl);
+            }
+
             let html = ''; // Variable außerhalb der Schleife
 
-            for(let k=1; k <= anzahl; k++) {
+            for(let k = 0; k < anzahl; k++) {
+
+                // Loop unterbrechen, wenn die Anzahl größer als maxAnzahl ist
+                if(k >= maxAnzahl) {
+                    break;
+                }
+
+                /* 
+                    ${k+1} sorgt dafür, dass das im Code bei 0 beginnende Hochzählen von k 
+                    nicht zu "Alter (Kind 0)" führt, sondern bei 1 beginnt.
+                */
+                html = html + `<div class="child"><label for="cF_child_${k+1}">Alter (Kind ${k+1})</label><input type="number" name="cF_child_${k+1}" id="cF_child_${k+1}"></div>`; 
                 // Dieser Loop erweitert die Variable html 
                 // um eine Zeile je Loop-Durchgang
-
-                html = html + `<div class="child"><label for="cF_child_${k}">Alter (Kind ${k})</label><input type="number" name="cF_child_${k}" id="cF_child_${k}"></div>`;
                 // Strings können nicht mehrzeilig gespeichert werden, darum alles in einer Zeile!
             }
 
