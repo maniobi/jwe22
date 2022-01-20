@@ -1,5 +1,23 @@
 let deinName = 'Nik'; // string
 
+
+// Hier ausgeben: deinName =>  "Nik"
+
+deinName = 'Mark';
+
+// Hier ausgeben: deinName => "Mark"
+
+
+
+const geburtstag = '30.09.1987';
+geburtstag = '20.09.1987';
+// => Fehler in der Console
+
+
+
+
+
+
 let alter = 26; // integer
 
 let meinAuto = {

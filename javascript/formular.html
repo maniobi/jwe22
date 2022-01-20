@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular überprüfen</title>
+</head>
+<body>
+
+    <form action="#" id="checkForm" method="get">
+
+        <label for="cF_name">Name</label>
+        <input type="text" name="cF_name" id="cF_name" value="">
+        <br>
+
+        <label for="cF_email">E-Mail</label>
+        <input type="email" name="cF_email" id="cF_email">
+        <br>
+
+        <label for="cF_children">Anzahl der Kinder</label>
+        <input type="number" name="cF_children" id="cF_children" min="0" value="0">
+        <br>
+        
+        <div id="childrenAge">
+            <!-- 
+                <div class="child">
+                    <label for="cF_child_1">Alter (Kind 1)</label>
+                    <input type="number" name="cF_child_1" id="cF_child_1">
+                </div>
+             -->
+        </div>
+        
+
+
+        <br>
+        <button type="submit">Abschicken</button>
+
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+    <script>
+
+        /*
+            Anzahl der Kinder auf Änderungen überwachen
+            und bei einer Änderung 
+            entsprechend der Anzahl neue Formularfelder (Alter Kind x) einfügen
+            
+        */
+        $('#cF_children').change(function(){
+            console.log('Anzahl der Kinder wurde geändert.');
+            
+            let anzahl = $(this).val();
+
+            let html = ''; // Variable außerhalb der Schleife
+
+            for(let k=1; k <= anzahl; k++) {
+                // Dieser Loop erweitert die Variable html 
+                // um eine Zeile je Loop-Durchgang
+
+                html = html + `<div class="child"><label for="cF_child_${k}">Alter (Kind ${k})</label><input type="number" name="cF_child_${k}" id="cF_child_${k}"></div>`;
+                // Strings können nicht mehrzeilig gespeichert werden, darum alles in einer Zeile!
+            }
+
+            // Finden der ID childrenAge und ersetzen des HTML-Codes innerhalb des HTML-Tags
+            $('#childrenAge').html(html);
+
+        });
+
+
+
+
+        $('#checkForm button').click(function(e) {
+
+            if( $('#cF_name').val().length > 0 ) {
+
+                // formular wird abgeschickt
+                console.log('Name ausgefüllt');
+
+                // Prüfen auf den Datentyp
+                if(typeof $('#cF_name').val() == 'string') {
+                    console.log('Name ist eine Zeichenkette');
+
+                    // Groß- und Kleinbuchstaben
+                    if($('#cF_name').val().match(/[a-zA-Z]+/g)) {
+                        console.log('Name enthält Groß- bzw. Kleinbuchstaben.');
+
+                    }
+                } else {
+                    console.error('Name ist kein gültiges Format');
+                }
+
+            } 
+
+            if($('#cF_email').val().length > 0) {
+                // Auslesen der Email-Adresse und suchen nach dem @-Zeichen
+                let positionOfKlammeraffe = $('#cF_email').val().indexOf('@');
+
+                let blacklist = "gmail.com, hotmail.com, yahoo.de";
+
+                // Eingabe wird zerlegt in einen Teilstring (substring): gmail.com
+                let eingabeDomain = $('#cF_email').val().substring(positionOfKlammeraffe+1);
+
+                if(blacklist.indexOf(eingabeDomain) == -1 ) {
+                    console.log('E-Mail Adresse ist nicht auf unserer Blacklist');
+                } else {
+                    console.error('Mit dier E-Mail Adresse werden Sie hier bei uns nicht weit kommen ;-)');
+                }
+            } else {
+                //console.error('E-Mail Adresse wurde nicht ausgefüllt');
+            }
+
+            
+            // Bereich 0 - 5 
+            if($('#cF_children').val() >= 0 && $('#cF_children').val() < 6 ) {
+                console.log('Die Anzahl der Kinder liegt in einem gültigen Bereich.');
+            } else {
+                console.error('Die Anzahl der Kinder ist leider nicht möglich.');
+            }
+
+            // unternbinden des Standardverhaltens eines Elements inkl. Touch-Events
+            e.preventDefault();
+
+            // unterbinden des Standardverhaltens eines Elements
+            return false;
+            
+        });        
+
+    </script>
+    
+    
+</body>
+</html>

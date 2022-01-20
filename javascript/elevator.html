@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --floor: 350px;
+        }
+
+        #house {
+            position: relative;
+            width: 1000px;
+            height: calc(3 * var(--floor));
+            background: grey;
+        }
+
+        #elevator {
+            position: absolute;
+            bottom: 0; /* Standard: im EG*/
+            right: 0;
+            width: 200px;
+            height: var(--floor);
+            background: blue;
+            transition: all 5s ease-in-out 1s;
+        }
+
+        #grass {
+            background: rgb(85, 136, 10);
+            width: 100%;
+            height: 50px;
+        }
+        #controls {
+            margin: 30% auto 0;
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-flow: column;
+        }
+
+        #controls button {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Lift der sich im Haus zwischen den Stockwerken auf und ab bewegt -->
+
+
+    <div id="house">
+
+        <div id="elevator">
+
+            <div id="controls">
+                <button id="og2" data-floor="2">2. OG</button>
+                <button id="og1" data-floor="1">1. OG</button>
+                <button id="eg" data-floor="0">EG</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="grass">
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        let floors = [0, 350, 700];
+
+        function goToFloor(x) {
+            $('#elevator').css('bottom',floors[x]);
+
+            // Animation mit JavaScript
+            // $('#elevator').animate(
+            //     {
+            //         bottom: floors[x]
+            //     }, 
+            //     5000
+            // );
+
+
+        }
+
+        $('#controls button').click(function() {
+            let x = $(this).data('floor');
+            goToFloor(x);
+        });
+
+    </script>
+
+</body>
+</html>
