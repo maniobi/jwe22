@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen Part 2</title>
+
+    <style>
+
+        #output .row.product {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #output .row.product span:nth-child(1) {
+            flex-basis: 40%;
+        }
+
+        #strange_layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: orange;
+            transition: all 3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="output">
+        <!-- dynamisches HTML einfügen -->
+    </div>
+
+    <div id="strange_layer">
+
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="js/loops_part2.js"></script>
+
+</body>
+</html>

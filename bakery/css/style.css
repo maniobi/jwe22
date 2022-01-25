@@ -226,6 +226,10 @@ main img {
     text-align: center;
 }
 
+#products .row [data-sum] {
+    align-self: center;
+}
+
 
 form .row {
     margin-bottom: 1em;

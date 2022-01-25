@@ -137,6 +137,28 @@
                 speed: 3000,
             }
         );
+
+        // let zeit = new Date('2022-01-25T14:30:00');
+        let zeit = new Date();
+        let stundeDesTages = zeit.getHours();
+        let greeting = '';
+
+        if(stundeDesTages > 4 && stundeDesTages < 11) {
+            // guten Morgen
+            greeting = 'Guten Morgen!';
+
+        } else if (stundeDesTages >= 11 && stundeDesTages < 14) {
+            greeting = 'Mahlzeit!';
+        } else if (stundeDesTages >= 14 && stundeDesTages < 17) {
+            greeting = 'Wunderschönen guten Nachmittag!'; 
+        } else if(stundeDesTages >= 17 && stundeDesTages < 20) {
+            greeting = 'n´Abend!';
+        } else {
+            greeting = 'Hey, etwas spät schon, was?';
+        }
+
+        $('#home_content').prepend(`<p class="greeting">${greeting}</p>`);
+
     </script>
 
 </body>
