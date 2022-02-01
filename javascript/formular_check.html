@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .row {
+            margin-bottom: 0.5rem;
+        }
+
+
+        .error {
+            color: rgb(104, 13, 13);
+            background: rgb(209, 144, 144);
+            padding: 0.8em;
+            border-radius: 15px;
+            font-size: 0.6em;
+            display: block;
+            display: none;
+        }
+        .success {
+            padding: 1rem;
+            text-align: center;
+            background: rgb(198, 255, 113);
+            border-radius: 15px;
+            border: 3px solid rgb(79, 248, 79);
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+
+        fieldset {
+            border-radius: 15px;
+            border: 3px solid silver;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+
+        Anrede:         nl_salutation
+        Name:           nl_name
+        E-Mail:         nl_email
+        Datenschutz:    nl_gdpr
+
+     -->
+
+
+     <h1>Newsletter-Anmeldung</h1>
+
+    <p>Trage dich jetzt in unseren Newsletter ein und verpasse keine News und Angebot mehr...!</p>
+
+     <div class="success">
+         Vielen Dank, dass Sie sich für den Empfang unseres Newsletters registriert haben! Sie werden es nicht bereuen ;-) !
+     </div>
+
+     <form action="#">
+
+        <fieldset>
+
+            <div class="row">
+                <input type="radio" name="nl_salutation" id="nl_salutation_herr">
+                <label for="nl_salutation_herr">Herr</label>
+
+                <input type="radio" name="nl_salutation" id="nl_salutation_frau">
+                <label for="nl_salutation_frau">Frau</label>
+
+                <p class="error" id="err_nl_salutation">Bitte geben Sie an wie Sie angesprochen werden möchten.</p>
+            </div>
+
+            <div class="row">
+                <input type="text" name="nl_name" id="nl_name" placeholder="Ihr Name">
+                <p class="error" id="err_nl_name">Bitte geben Sie Ihren Namen ein.</p>
+            </div>
+
+            <div class="row">
+                <input type="email" name="nl_email" id="nl_email" placeholder="Ihre E-Mail Adresse">
+                <p class="error" id="err_nl_email">Bitte geben Sie Ihre E-Mail-Adresse ein.</p>
+            </div>
+
+            <div class="row">
+                <input type="checkbox" name="nl_gdpr" id="nl_gdpr">
+                <label for="nl_gdpr">Ich stimme den Datenschutzbestimmungen zu</label>
+                <p class="error" id="err_nl_gdpr">Bitte stimmen Sie den Datenschuzubestimmungen zu, wenn Sie den Newsletter erhalten möchten.</p>
+            </div>
+            
+            <div class="row">
+                <button type="submit" id="nl_submit">Abschicken</button>
+            </div>
+
+        </fieldset>
+
+     </form>
+
+     <!-- jQuery einbinden -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+     <!-- externes JavaScript File einfügen -->
+     <script src="js/formular_check.js"></script>
+
+
+
+</body>
+</html>

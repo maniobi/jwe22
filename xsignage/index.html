@@ -8,25 +8,15 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-
+    <link rel="stylesheet" href="css/vendor/mmenu.css">
     
 
 </head>
 <body>
-
     
-    <nav id="main_nav">
 
-        <i class="close">x</i>
+    <div id="page">
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Produkte</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-    </nav>
-    
         <header id="main_header">
 
             <div class="container">
@@ -34,7 +24,7 @@
                     <img src="img/layout/logo-x-signage.png" alt="X-SIGNAGE">
                 </a>
     
-                <a href="#main_nav" id="burger_nav">
+                <a href="#menu" id="burger_nav">
                     <img src="img/layout/nav-icon.png" alt="Navigation Icon">
                 </a>
             </div>
@@ -170,17 +160,42 @@
     
         </footer>
 
+
+
+    </div>
+    
+    
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Produkte</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+
+        
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
 
-    <script>
-        $.getScript('js/menu.js', function() {
-            console.log('menu.js wurde geladen');
-        });        
-    </script>
 
+    <script src="js/vendor/mmenu.js"></script>
+
+    <!-- Fire the plugin -->
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded", () => {
+                new Mmenu( "#menu", {
+                    "extensions": [
+                        "theme-dark"
+                    ]
+                });
+            }
+        );
+    </script>
     
 
-    <!-- <script src="js/menu.js"></script> -->
+    
 
 </body>
 </html>
