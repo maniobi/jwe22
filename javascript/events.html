@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventhandler</title>
+</head>
+<body>
+
+    <input type="text" id="eingabe" name="eingabe" placeholder="Gib mir eine Zahl"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        $('#eingabe').keydown(function(){
+            
+        });
+
+        $('#eingabe').keyup(function(e){
+
+            console.log(e.originalEvent.key);
+
+            if(e.originalEvent.key == '5') {
+                console.log('Oh, sie haben 5 gedrückt!');
+
+                $('#eingabe').animate({
+                    borderWidth: '10px'
+                }, 3000);
+
+            }
+
+            if($(this).val().length == 3) {
+                console.log('Value: ' + $(this).val());
+
+                if($(this).val() == 888) {
+                    console.log('Yea!');
+                } else {
+                    console.log('FAALSCH!');
+                    $(this).val('');
+                }
+
+            }     
+
+        });
+
+
+        $('#eingabe').change(function() {
+            console.log('Change');
+        });
+
+        $('#eingabe').focus(function() {
+            console.log('hey, I am in your focus!');
+        });
+
+        $('#eingabe').on('change keyup', function(){
+            console.log('change keyup');
+        });
+
+
+    </script>
+    
+</body>
+</html>
